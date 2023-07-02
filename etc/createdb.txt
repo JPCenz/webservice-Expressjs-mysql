@@ -1,0 +1,14 @@
+create database libro_reclamaciones_db;
+use libro_reclamaciones_db;
+
+create table reclamo(
+	id int NOT NULL AUTO_INCREMENT ,
+	nombres varchar(50) NOT NULL, 
+    apellidos varchar(50) NOT NULL,
+	nro_dni varchar(50), 
+    motivo_reclamo varchar(200),
+    pedido_reclamo varchar(200),
+    fecha_compra date,
+	date_created DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+    );
