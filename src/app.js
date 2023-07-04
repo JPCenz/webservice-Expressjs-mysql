@@ -64,9 +64,9 @@ app.post("/reclamo", async (req, res) => {
 
 app.listen(8080, () => console.log(`Server init at http://localhost:${8080}`));
 
-const searchQuery = (ruc, id) => {
+const searchQuery = (dni, id) => {
   return `SELECT * FROM 
-  libro_reclamaciones_db.reclamo r WHERE r.id ='${id}' or r.nro_dni ='${ruc}'`;
+  libro_reclamaciones_db.reclamo r WHERE r.id ='${id}' or r.nro_dni ='${dni}'`;
 };
 const insertQuery = (nombres,apellidos,nro_dni,motivo_reclamo,pedido_reclamo,fecha_compra)=>{
   return(
